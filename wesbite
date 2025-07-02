@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mos Shack - Gourmet Burgers & Shakes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1998&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-hamburger text-yellow-400 text-2xl"></i>
+                <span class="text-2xl font-bold">MO'S <span class="text-yellow-400">SHACK</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#menu" class="hover:text-yellow-400 transition">Menu</a>
+                <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-black pb-4 px-4">
+            <a href="#home" class="block py-2 hover:text-yellow-400 transition">Home</a>
+            <a href="#menu" class="block py-2 hover:text-yellow-400 transition">Menu</a>
+            <a href="#about" class="block py-2 hover:text-yellow-400 transition">About</a>
+            <a href="#contact" class="block py-2 hover:text-yellow-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">MO'S <span class="text-yellow-400">SHACK</span></h1>
+            <p class="text-xl md:text-2xl mb-8">Freshly made smash burgers in house everyday</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">VIEW MENU</a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">ORDER NOW</a>
+            </div>
+        </div>
+        <a href="#menu" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-2xl floating-btn"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">OUR <span class="text-yellow-400">MENU</span></h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Handcrafted with premium ingredients and served with love</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu items go here -->
+                <!-- Only partial menu included for brevity -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
